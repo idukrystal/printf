@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * validate - confirms if a string contains corect specifiers
  * @s: the string
