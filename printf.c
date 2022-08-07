@@ -8,8 +8,8 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int len = validate(format, 0);
-	unsigned int i, tot = 0;
+	int len = validate(format, 0);
+	int i, tot = 0;
 	char tmp;
 	va_list args;
 
