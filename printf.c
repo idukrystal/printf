@@ -9,9 +9,10 @@
  */
 int _printf(const char *format, ...)
 {
-	int len = 30;
-	int i, tot = 0;
+	unsigned int len = validate(format, 0);
+	unsigned int i, tot = 0;
 	char tmp;
+	char *tmp_string;
 	va_list args;
 
 	va_start(args, format);
@@ -21,7 +22,16 @@ int _printf(const char *format, ...)
 
 		if (tmp == '%')
 		{
-
+			switch (format[++i])
+			{
+			case 'c':
+				tmp = va_arg(args, int);
+				break;
+			case 's':
+				tmp_string = va_arg(args, char*);
+				write(1, tmp_string, validate(tmp_string, 0));
+				continue;
+			}
 		}
 		tot += write(1, &tmp, 1);
 	}
