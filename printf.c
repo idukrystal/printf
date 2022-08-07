@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 				break;
 			case 's':
 				tmp_string = va_arg(args, char*);
-				write(1, tmp_string, validate(tmp_string, 0));
+				tot += write(1, tmp_string, validate(tmp_string, 0));
 				continue;
 			}
 		}
