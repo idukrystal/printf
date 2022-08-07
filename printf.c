@@ -34,6 +34,10 @@ int _printf(const char *format, ...)
 				tmp_string = va_arg(args, char*);
 				tot += write(1, tmp_string, validate(tmp_string, 0));
 				continue;
+			case '%':
+				tmp = format[i];
+				tot += write(1, &tmp, 1);
+				continue;
 			}
 		}
 		tot += write(1, &tmp, 1);
