@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef PRINTF_H
+#define PRINTF_H
 
 #include <unistd.h>
 #include <stdlib.h>
@@ -9,4 +9,4 @@ unsigned int validate(const char *, int);
 int is_valid(char c);
 char *convert_char(void *);
 
-#endif /* MAIN_H  */
+#endif /* PRINTF_H */
