@@ -15,10 +15,13 @@ int _printf(const char *format, ...)
 	char *tmp_string;
 	va_list args;
 
-	if (format == NULL)
+	if (!format || (format[0] == '%' && !format[1]))
+		return (-1);
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
 	len = validate(format, 0);
 	va_start(args, format);
+	
 	for (i = 0; i < len; i++)
 	{
 		tmp = format[i];
