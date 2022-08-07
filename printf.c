@@ -8,7 +8,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int len = validate(format, 0);
+	int len = 30;
 	int i, tot = 0;
 	char tmp;
 	va_list args;
