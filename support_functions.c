@@ -33,7 +33,7 @@ unsigned int validate(const char *s, int val)
  */
 int is_valid(char c)
 {
-	char *sub = "cs";
+	char *sub = "cs%";
 	int i;
 
 	for (i = 0; i < 2; i++)
