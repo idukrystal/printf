@@ -9,7 +9,7 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int len = validate(format, 0);
+	unsigned int len;
 	unsigned int i, tot = 0;
 	char tmp;
 	char *tmp_string;
@@ -17,6 +17,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
+	len = validate(format, 0);
 	va_start(args, format);
 	for (i = 0; i < len; i++)
 	{
