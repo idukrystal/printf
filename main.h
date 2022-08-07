@@ -1,12 +1,6 @@
-#ifndef PRINTF_H
-#define PRINTF_H
-
-#include <unistd.h>
-#include <stdlib.h>
+#ifndef MA_H
+#define MA_H
 
 int _printf(const char *format, ...);
-unsigned int validate(const char *, int);
-int is_valid(char c);
-char *convert_char(void *);
 
-#endif /* PRINTF_H */
+#endif
