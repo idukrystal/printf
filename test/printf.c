@@ -9,12 +9,15 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int len = validate(format, 0);
+	unsigned int len;
 	unsigned int i, tot = 0;
 	char tmp;
 	char *tmp_string;
 	va_list args;
 
+	if (format == NULL)
+		return (-1);
+	len = validate(format, 0);
 	va_start(args, format);
 	for (i = 0; i < len; i++)
 	{
@@ -29,7 +32,11 @@ int _printf(const char *format, ...)
 				break;
 			case 's':
 				tmp_string = va_arg(args, char*);
-				write(1, tmp_string, validate(tmp_string, 0));
+				tot += write(1, tmp_string, validate(tmp_string, 0));
+				continue;
+			case '%':
+				tmp = format[i];
+				tot += write(1, &tmp, 1);
 				continue;
 			}
 		}
