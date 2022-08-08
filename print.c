@@ -27,6 +27,10 @@ int print_specifier(char c, va_list args)
 	case 'u':
 	case 'i':
 		return (print_number(va_arg(args, int)));
+	case 'o':
+	case 'x':
+	case 'X':
+		return (to_base(va_arg(args, int), c));
 	default:
 		return (_putchar('%') + _putchar(c));
 	}

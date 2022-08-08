@@ -13,14 +13,15 @@ unsigned int to_base(unsigned int n, char b)
 
 	switch (b)
 	{
-		case 'b':
-			base = 2;
-			break;
-		case 'o':
-			base = 8;
-			break;
-		case 'x':
-			base = 16;
+	case 'b':
+		base = 2;
+		break;
+	case 'o':
+		base = 8;
+		break;
+	case 'X':
+	case 'x':
+		base = 16;
 	}
 	if (n == 0)
 		return (0);
@@ -30,7 +31,7 @@ unsigned int to_base(unsigned int n, char b)
 	{
 		_putchar(tmp + 48);
 	}
-	else if (b == "x")
+	else if (b == 'x')
 	{
 		_putchar((tmp - 10) + 97);
 	}
@@ -40,5 +41,3 @@ unsigned int to_base(unsigned int n, char b)
 	}
 	return (i);
 }
-
-
