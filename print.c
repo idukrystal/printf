@@ -10,7 +10,6 @@ int print_specifier(char c, va_list args)
 {
 	char tmp;
 	char *tmp_string;
-	int ti;
 
 	switch (c)
 	{

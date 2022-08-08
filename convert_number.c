@@ -6,9 +6,9 @@
  * @b: binary.
  * Return: no return.
  */
-unsigned int to_base(unsigned int n, char b)
+int to_base(unsigned int n, char b)
 {
-	unsigned int i = 1, tmp;
+	unsigned int i = 0, tmp;
 	int base;
 
 	switch (b)
