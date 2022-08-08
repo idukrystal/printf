@@ -36,3 +36,72 @@ unsigned int  print_number(int n)
 	}
 	return (tot);
 }
+
+
+unsigned int to_base(unsigned int n, charb)
+
+{
+
+   unsigned int i = 1, tmp;
+
+   int base;
+
+  
+
+   switch(b)
+
+   {
+
+       case 'b': base = 2;
+
+       break;
+
+       case 'o': base = 8;
+
+       break;
+
+       case 'x' :
+
+       case 'x' : base =16;
+
+   }
+
+   if (n == 0)
+
+    return 0;
+
+   i += to_base(n / base, b);
+
+   tmp = n % base;
+
+   if (rmp < 10)
+
+   {
+
+       _putchar(tmp + 48);
+
+   
+
+   }
+
+   else if (b == "x")
+
+   {
+
+       _putchar((tmp - 10) + 97);
+
+   }
+
+   else
+
+   {
+
+       _putchar((temp -10) + 65);
+
+   }
+
+   return i;
+
+}
+
+
