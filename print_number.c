@@ -37,21 +37,27 @@ unsigned int  print_number(int n)
 	return (tot);
 }
 
+/**
+ * to_base- convert to binary.
+ * @n: integer
+ * @b: binary.
+ * Return: no return.
+ */
 
-unsigned int to_base(unsigned int n, charb)
+unsigned int to_base(unsigned int n, char b)
 
 {
    unsigned int i = 1, tmp;
    int base;
 
-   switch(b)
+   switch (b)
    {
        case 'b': base = 2;
        break;
        case 'o': base = 8;
        break;
-       case 'x' :
-       case 'x' : base =16;
+       case 'x':
+       case 'x': base = 16;
    }
    if (n == 0)
     return 0;
@@ -67,7 +73,7 @@ unsigned int to_base(unsigned int n, charb)
    }
    else
    {
-       _putchar((temp -10) + 65);
+       _putchar((temp - 10) + 65);
    }
    return i;
 }
