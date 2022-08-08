@@ -15,19 +15,19 @@ int print_specifier(char c, va_list args)
 	{
 	case 'c':
 		tmp = va_arg(args, int);
-		return (write(1, &tmp, 1));
+		return (_putchar(tmp));
 	case 's':
 		tmp_string = va_arg(args, char*);
 		if (tmp_string == NULL)
 			tmp_string = "(null)";
-		return (write(1, tmp_string, _strlen(tmp_string)));
+		return (_puts(tmp_string));
 	case '%':
-		return (write(1, &c, 1));
+		return (_putchar('%'));
 	case 'd':
+	case 'u':
 	case 'i':
 		return (print_number(va_arg(args, int)));
 	default:
-		tmp = '%';
-		return (write(1, &tmp, 1) + write(1, &c, 1));
+		return (_putchar('%') + _putchar(c));
 	}
 }

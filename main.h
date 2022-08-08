@@ -11,6 +11,7 @@ int is_valid(char c);
 char *convert_char(void *);
 int print_specifier(char c, va_list args);
 unsigned int  print_number(int n);
-int _putchar(char);
+int _putchar(int );
+int _puts(char *);
 
 #endif /* MAIN_H  */
