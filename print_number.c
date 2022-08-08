@@ -56,7 +56,6 @@ unsigned int to_base(unsigned int n, char b)
        break;
        case 'o': base = 8;
        break;
-       case 'x':
        case 'x': base = 16;
    }
    if (n == 0)
