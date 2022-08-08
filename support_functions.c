@@ -1,25 +1,15 @@
 #include "main.h"
 /**
- * validate - confirms if a string contains corect specifiers
+ * _strlen  - computes length of a string
  * @s: the string
- * @val: if 1 - only counts the no of characters in s
  * Return: length of string s
  */
-unsigned int validate(const char *s, int val)
+unsigned int _strlen(const char *s)
 {
 	unsigned int i = 0;
 
 	while (s[i] != '\0')
 	{
-		if (s[i] == '%' && val)
-		{
-			if (s[i++] != '\0' && is_valid(s[i]))
-			{
-				i++;
-				continue;
-			}
-			exit(134);
-		}
 		i++;
 	}
 
