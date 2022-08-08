@@ -28,7 +28,6 @@ int print_specifier(char c, va_list args)
 	case 'u':
 	case 'i':
 		return (print_number(va_arg(args, int)));
-	case 'b':
 	case 'o':
 	case 'x':
 	case 'X':
