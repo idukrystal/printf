@@ -13,5 +13,6 @@ int print_specifier(char c, va_list args);
 unsigned int  print_number(int n);
 int _putchar(int );
 int _puts(char *);
+unsigned int to_base(unsigned int n, charb);
 
 #endif /* MAIN_H  */
