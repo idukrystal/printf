@@ -16,6 +16,13 @@ unsigned int _strlen(const char *s)
 	return (i);
 }
 
+int is_flag(char c)
+{
+	if((c == ' ' || c == '+') || c == '#')
+		return 1;
+	else return 0;
+}
+
 /**
  * is_valid - checks if a specifier is supported
  * @c: the specifier

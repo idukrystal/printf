@@ -21,9 +21,9 @@ int _printf(const char *format, ...)
 
 		if (format[i] == '%')
 		{
-			if (format[++i] == ' ')
+			if ((is_flag(format[++i])))
 			{
-				while (format[i] == ' ')
+				while (is_flag(format[i]))
 					i++;
 			}
 			if (format[i] != '\0')
