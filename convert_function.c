@@ -5,6 +5,7 @@
  * to_base - prints an unsigned int in any given base
  * @n: the integer
  * @b: a char trpresenting the base
+ * @f: flag pointer
  * Return: number of chars printed;
  */
 int to_base(unsigned int n, char b, flags *f)
