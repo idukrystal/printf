@@ -26,6 +26,8 @@ int print_specifier(char c, va_list args)
 	case 'd':
 	case 'i':
 		return (print_number(va_arg(args, int)));
+	case 'u':
+		return (print_u_number(va_arg(args,unsigned int)));
 	case 'b':
 	case 'o':
 	case 'x':
