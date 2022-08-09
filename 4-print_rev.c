@@ -2,8 +2,8 @@
 
 /**
  * print_rev - prints a string in reverse
- *@s: string to be printed
- *
+ * @s: string to be printed
+ * Return: no of chars printed
  */
 int print_rev(char *s)
 {

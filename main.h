@@ -1,7 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-
+/**
+ * struct flags - represents all flags
+ * @plus: '+' flag
+ * @space: ' ' flag
+ * @hash: '#' flag
+ */
 typedef struct flags
 {
 	int plus;

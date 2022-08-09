@@ -4,6 +4,7 @@
  * print_specifier - prints out a specifier
  * @c: the specier
  * @args: variable arg cintaing specifier
+ * @f: flags
  * Return: total chars printed;
  */
 int print_specifier(char c, va_list args, flags *f)
@@ -27,7 +28,7 @@ int print_specifier(char c, va_list args, flags *f)
 	case 'i':
 		return (print_number(va_arg(args, int), f));
 	case 'u':
-		return (print_u_number(va_arg(args,unsigned int)));
+		return (print_u_number(va_arg(args, unsigned int)));
 	case 'b':
 	case 'o':
 	case 'x':

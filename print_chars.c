@@ -42,14 +42,19 @@ int _puts(char *s)
 	return (i);
 }
 
+/**
+ * print_ascii - prints strings and prints ascii code of
+ * @s: the string
+ * Return: no of chars printed
+ */
 int print_ascii(char *s)
 {
 	int i = 0;
 	int tot = 0;
 
 	while (s[i] != '\0')
-        {
-		if ((s[i] > 0 && s[i] < 32) || s[i] >= 127 )
+	{
+		if ((s[i] > 0 && s[i] < 32) || s[i] >= 127)
 		{
 			tot += _putchar('\\');
 			tot += _putchar('x');
@@ -59,8 +64,8 @@ int print_ascii(char *s)
 			i++;
 			continue;
 		}
-                tot += _putchar(s[i]);
-                i++;
-        }
-        return (tot);
+		tot += _putchar(s[i]);
+		i++;
+	}
+	return (tot);
 }

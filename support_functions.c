@@ -16,18 +16,27 @@ unsigned int _strlen(const char *s)
 	return (i);
 }
 
+/**
+ * is_flag - checks if a char is a valid flag
+ * @c: the char
+ * @f: the flags
+ * Return: 1 if it is 0 if not
+ */
 int is_flag(char c, flags *f)
 {
 	switch (c)
 	{
-	case ' ': f->space = 1;
+	case ' ':
+		f->space = 1;
 		return (1);
-	case '+': f->plus = 1;
+	case '+':
+		f->plus = 1;
 		return (1);
-	case '#': f->hash = 1;
+	case '#':
+		f->hash = 1;
 		return (1);
 	}
-	return 0;
+	return (0);
 }
 
 /**
