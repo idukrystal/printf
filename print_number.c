@@ -3,6 +3,7 @@
 /**
  * print_number - prints an integer.
  * @n: input integer.
+ * @f: flag poibter
  * Return: no return.
  */
 unsigned int  print_number(int n, flags *f)
