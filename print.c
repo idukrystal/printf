@@ -32,7 +32,7 @@ int print_specifier(char c, va_list args, flags *f)
 	case 'o':
 	case 'x':
 	case 'X':
-		return (to_base(va_arg(args, unsigned int), c));
+		return (to_base(va_arg(args, unsigned int), c, f));
 	case 'S':
 		return (print_ascii(va_arg(args, char *)));
 	case 'p':

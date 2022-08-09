@@ -7,7 +7,16 @@
  * @b: a char trpresenting the base
  * Return: number of chars printed;
  */
-int to_base(unsigned int n, char b)
+int to_base(unsigned int n, char b, flags *f)
+{
+	unsigned int i = 0;
+
+	if ((f->hash == 1 && n != 0) && (b == 'X' || b == 'x'))
+		i += _puts("0X");
+	i += base_n(n, b);
+	return (i);
+}
+int base_n(unsigned int n, char b)
 {
 	unsigned int i = 0, tmp;
 	int base;
@@ -30,7 +39,7 @@ int to_base(unsigned int n, char b)
 		return (_putchar('0'));
 	}
 	if (n / base != 0)
-		i  += to_base(n / base, b);
+		i  += base_n(n / base, b);
 	tmp = n % base;
 	if (tmp < 10)
 	{
