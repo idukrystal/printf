@@ -39,7 +39,7 @@ int main(void)
     _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
     _printf("Address:[%p]\n", addr);
-    printf("Address:[%p]\n", (long)addr);
+    printf("Address:[%p]\n", addr);
     len = _printf("Percent:[%%]\n");
     len2 = printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
