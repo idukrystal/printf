@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-	if (format[0] == '%' && format[1] == ' ' && format[2] == '\0')
+	if (format[0] == '%' && format[1] == ' ' && cformat[2] == '\0')
 		return (-1);
 	va_start(args, format);
 	for (i = 0; format[i] != '\0'; i++)
@@ -32,9 +32,8 @@ int _printf(const char *format, ...)
 				return (tot);
 			continue;
 		}
-		tot += _putchar(format[i]);
+		tot += write(1, (format + i), 1);
 	}
-	_putchar(-1);
 	va_end(args);
 	return (tot);
 }

@@ -12,7 +12,8 @@ char *convert_char(void *);
 int print_specifier(char c, va_list args);
 unsigned int  print_number(int n);
 unsigned int  print_u_number(unsigned int);
-int _putchar(char);
+int _putchar(int);
 int to_base(unsigned int, char);
+int _puts(char *);
 
 #endif /* MAIN_H  */
