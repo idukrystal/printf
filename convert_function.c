@@ -70,6 +70,7 @@ int to_long_hex(unsigned long ad)
 {
 	int i = 0;
 	unsigned long tmp = 0;
+
 	if (ad == 0)
 		return (_putchar('0'));
 	if (ad / 16 != 0)
