@@ -2,10 +2,7 @@
 #define MAIN_H
 
 /**
- * struct flags - flags
- * @plus: plus
- * @space: space
- * @hash: hash
+ * struct flag
  */
 typedef struct flags
 {
