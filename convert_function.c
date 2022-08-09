@@ -50,8 +50,9 @@ int to_address(unsigned long ad)
 {
 	int i = 0;
 
-	i += _putchar('0');
-	i += _putchar('x');
+	if (ad == 0)
+		return (_puts("(nil)"));
+	i += _puts("0x");
 	i += to_long_hex(ad);
 
 	return (i);
