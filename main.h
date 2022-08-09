@@ -25,7 +25,7 @@ unsigned int  print_number(int n, flags *);
 unsigned int  print_u_number(unsigned int);
 int _putchar(int);
 int to_base(unsigned int, char, flags *);
-int base_n(unsigned int, char );
+int base_n(unsigned int, char);
 int to_address(unsigned long);
 int to_long_hex(unsigned long ad);
 int _puts(char *);
