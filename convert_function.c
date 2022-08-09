@@ -79,6 +79,12 @@ int to_address(unsigned long ad)
 
 	return (i);
 }
+
+/**
+ * to_long_hex - hex to long
+ * @ad: unsigned long
+ * Return: integer
+ */
 int to_long_hex(unsigned long ad)
 {
 	int i = 0;
