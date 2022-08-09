@@ -63,6 +63,11 @@ int base_n(unsigned int n, char b)
 	}
 }
 
+/**
+ * to_address - get address
+ * @ad:  insigned log
+ * Return: i
+ */
 int to_address(unsigned long ad)
 {
 	int i = 0;
