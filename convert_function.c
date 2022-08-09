@@ -17,6 +17,13 @@ int to_base(unsigned int n, char b, flags *f)
 	i += base_n(n, b);
 	return (i);
 }
+
+/**
+ * base_n- prints insigned int
+ * @n: integer
+ * @b: charcter of base
+ * Return: no
+ */
 int base_n(unsigned int n, char b)
 {
 	unsigned int i = 0, tmp;
