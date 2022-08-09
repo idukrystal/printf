@@ -26,6 +26,11 @@ int print_specifier(char c, va_list args)
 	case 'd':
 	case 'i':
 		return (print_number(va_arg(args, int)));
+	case 'b':
+	case 'o':
+	case 'x':
+	case 'X':
+		return (to_base(va_arg(args, unsigned int), c));
 	default:
 		tmp = '%';
 		return (write(1, &tmp, 1) + write(1, &c, 1));

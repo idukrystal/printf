@@ -25,12 +25,11 @@ int main(void)
     _printf("Unsigned:[%u]\n", ui);
     printf("Unsigned:[%u]\n", ui);
     _printf("Unsigned octal:[%o]\n", ui);
-	_printf("binary : %o %o %o\n",2,3,1);
     printf("Unsigned octal:[%o]\n", ui);
     _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
     printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    _printf("Character:[%c]\n", 'H');
-    printf("Character:[%c]\n", 'H');
+    _printf("Character:[%c %c]\n", 'H', 'B');
+    printf("Character:[%c %c]\n", 'H', 'B');
     _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
     _printf("Address:[%p]\n", addr);
@@ -41,5 +40,6 @@ int main(void)
     printf("Len:[%d]\n", len2);
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
+    _printf("binary %b %b %b", 5 , 3, 0);
     return (0);
 }
