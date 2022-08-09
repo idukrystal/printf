@@ -35,6 +35,8 @@ int print_specifier(char c, va_list args, flags *f)
 		return (to_base(va_arg(args, unsigned int), c, f));
 	case 'S':
 		return (print_ascii(va_arg(args, char *)));
+	case 'r':
+		return (print_rev(va_arg(args, char *)));
 	case 'p':
 		return (to_address(va_arg(args, unsigned long)));
 	default:

@@ -44,8 +44,8 @@ int main(void)
     len2 = printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
-    _printf("Unknown:[%r]\n");
-    printf("Unknown:[%r]\n");
+    len = _printf("Unknown:[%r]\n", "man of war");
+    printf("Unknown:[%i]\n", len);
     _printf("binary %b %b %b\n", 5 , 3, 0);
 
 
