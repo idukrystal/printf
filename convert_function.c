@@ -9,7 +9,7 @@
  */
 int to_base(unsigned int n, char b)
 {
-	unsigned int i = 1, tmp;
+	unsigned int i = 0, tmp;
 	int base;
 
 	switch (b)
@@ -29,28 +29,19 @@ int to_base(unsigned int n, char b)
 	{
 		return (_putchar('0'));
 	}
-	if (n / base == 0)
-	{
-		tmp = n % base;
-		if (b == 'x')
-			return (_putchar(tmp - 10 +97));
-		else if(b == 'X')
-			return (_putchar(tmp - 10 +65));
-		return (_putchar(tmp + 48));
-	}
-	i  += to_base(n / base, b);
+	if (n / base != 0)
+		i  += to_base(n / base, b);
 	tmp = n % base;
 	if (tmp < 10)
 	{
-		_putchar(tmp + 48);
+		return (i + _putchar(tmp + 48));
 	}
 	else if (b == 'x')
 	{
-		_putchar((tmp - 10) + 97);
+		return (i + _putchar((tmp - 10) + 97));
 	}
 	else
 	{
-		_putchar((tmp - 10) + 65);
+		return (i + _putchar((tmp - 10) + 65));
 	}
-	return (i);
 }

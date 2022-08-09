@@ -49,6 +49,6 @@ int main(void)
     _printf("binary %b %b %b\n", 5 , 3, 0);
 
 
-    _printf("%S\n", "Best\nSchool");
+    _printf("%S\n", "Best\vSchool");
     return (0);
 }
