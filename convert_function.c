@@ -45,3 +45,28 @@ int to_base(unsigned int n, char b)
 		return (i + _putchar((tmp - 10) + 65));
 	}
 }
+
+int to_address(unsigned long ad)
+{
+	int i = 0;
+
+	i += _putchar('0');
+	i += _putchar('x');
+	i += to_long_hex(ad);
+
+	return (i);
+}
+int to_long_hex(unsigned long ad)
+{
+	int i = 0;
+	unsigned long tmp = 0;
+	if (ad == 0)
+		return (_putchar('0'));
+	if (ad / 16 != 0)
+		i += to_long_hex(ad / 16);
+	tmp = ad % 16;
+	if (tmp < 10)
+		return (i + _putchar((tmp) + 48));
+	else
+		return (i + _putchar((tmp - 10) + 97));
+}

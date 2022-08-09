@@ -14,6 +14,7 @@ unsigned int  print_number(int n);
 unsigned int  print_u_number(unsigned int);
 int _putchar(int);
 int to_base(unsigned int, char);
+int to_address(unsigned long);
 int _puts(char *);
 int print_ascii(char *);
 #endif /* MAIN_H  */

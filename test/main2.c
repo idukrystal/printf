@@ -2,8 +2,8 @@
 
 int main()
 {
-	for (int i = 0; i < 130; i++)
+	for (long i = 1000000; i < 1000100; i++)
 	{
-		i_printf("%X   %x\n", i);
+		_printf("%i   %p\n", i,i);
 	}
 }
