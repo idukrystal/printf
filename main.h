@@ -10,9 +10,7 @@ unsigned int _strlen(const char *);
 int is_valid(char c);
 char *convert_char(void *);
 int print_specifier(char c, va_list args);
-int  print_number(int n);
-int _putchar(int );
-int _puts(char *);
-int to_base(unsigned int n, char);
+unsigned int  print_number(int n);
+int _putchar(char);
 
 #endif /* MAIN_H  */

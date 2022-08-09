@@ -5,7 +5,7 @@
  * @n: input integer.
  * Return: no return.
  */
-int  print_number(int n)
+unsigned int  print_number(int n)
 {
 	unsigned int m, d, count, tot = 0;
 

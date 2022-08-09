@@ -32,9 +32,8 @@ int _printf(const char *format, ...)
 				return (tot);
 			continue;
 		}
-		tot += _putchar(format[i]);
+		tot += write(1, (format + i), 1);
 	}
-	_putchar(-1);
 	va_end(args);
 	return (tot);
 }
