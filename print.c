@@ -33,6 +33,8 @@ int print_specifier(char c, va_list args)
 	case 'x':
 	case 'X':
 		return (to_base(va_arg(args, unsigned int), c));
+	case 'S':
+		return (print_ascii(va_arg(args, char *)));
 	default:
 		tmp = '%';
 		return (_putchar(tmp) + _putchar(c));

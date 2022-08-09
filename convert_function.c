@@ -31,7 +31,12 @@ int to_base(unsigned int n, char b)
 	}
 	if (n / base == 0)
 	{
-		return (_putchar((n % base) + 48));
+		tmp = n % base;
+		if (b == 'x')
+			return (_putchar(tmp - 10 +97));
+		else if(b == 'X')
+			return (_putchar(tmp - 10 +65));
+		return (_putchar(tmp + 48));
 	}
 	i  += to_base(n / base, b);
 	tmp = n % base;

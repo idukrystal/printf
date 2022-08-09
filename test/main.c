@@ -46,6 +46,9 @@ int main(void)
     printf("Len:[%d]\n", len2);
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
-    _printf("binary %b %b %b", 5 , 3, 0);
+    _printf("binary %b %b %b\n", 5 , 3, 0);
+
+
+    _printf("%S\n", "Best\nSchool");
     return (0);
 }
