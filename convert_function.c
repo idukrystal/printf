@@ -3,7 +3,7 @@
 
 /**
  * to_base - prints an unsigned int in any given base
- * @n: the int:
+ * @n: the integer
  * @b: a char trpresenting the base
  * Return: number of chars printed;
  */
