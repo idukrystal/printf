@@ -5,9 +5,14 @@
  * @n: input integer.
  * Return: no return.
  */
-unsigned int  print_number(int n)
+unsigned int  print_number(int n, flags *f)
 {
 	unsigned int m, d, count, tot = 0;
+
+	if (f->space == 1 && f->plus == 0 && n >= 0)
+		tot += _putchar(' ');
+	if (f->plus == 1 && n >= 0)
+		tot += _putchar('+');
 
 	if (n < 0)
 	{

@@ -11,23 +11,7 @@ int print_specifier(char c, va_list args, flags *f)
 	char tmp;
 	char *tmp_string;
 
-	switch (c)
-	{
-	case 'c':
-		tmp = va_arg(args, int);
-		return (_putchar(tmp));
-	case 's':
-		tmp_string = va_arg(args, char*);
-		if (tmp_string == NULL)
-			tmp_string = "(null)";
-		return (_puts(tmp_string));
-	case '%':
-		return (_putchar(c));
-	case 'd':
-	case 'i':
-		return (print_number(va_arg(args, int), f));
-	case 'u':
-		return (print_u_number(va_arg(args,unsigned int)));
+	f));
 	case 'b':
 	case 'o':
 	case 'x':

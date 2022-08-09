@@ -16,11 +16,18 @@ unsigned int _strlen(const char *s)
 	return (i);
 }
 
-int is_flag(char c)
+int is_flag(char c, flags *f)
 {
-	if((c == ' ' || c == '+') || c == '#')
-		return 1;
-	else return 0;
+	switch (c)
+	{
+	case ' ': f->space = 1;
+		return (1);
+	case '+': f->plus = 1;
+		return (1);
+	case '#': f->hash = 1;
+		return (1);
+	}
+	return 0;
 }
 
 /**
