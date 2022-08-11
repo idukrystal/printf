@@ -38,4 +38,8 @@ int print_ascii(char *);
 
 int print_rev(char *);
 
+int rot13(char *s);
+
+char rot(char c);
+
 #endif /* MAIN_H  */

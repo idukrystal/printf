@@ -40,6 +40,8 @@ int print_specifier(char c, va_list args, flags *f)
 		return (print_rev(va_arg(args, char *)));
 	case 'p':
 		return (to_address(va_arg(args, unsigned long)));
+	case 'R':
+		return (rot13(va_arg(args, char *)));
 	default:
 		tmp = '%';
 		return (_putchar(tmp) + _putchar(c));

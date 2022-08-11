@@ -10,8 +10,8 @@ int main()
 	_printf("Address:[%p]\n", -10000000);
     printf("Address:[%p]\n", -10000000);*/
 
-	int len = printf("men are %#x  done\n", 50);
-      int len2 = _printf("men are %#x  done\n", 50);
+	int len = printf("%R\n", "mark");
+      int len2 = _printf("%R\n", "mark");
        printf("%i  %i\n" , len, len2);
        _printf("%i\n", len2);
 }
