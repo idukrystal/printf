@@ -21,7 +21,7 @@ int _putchar(int c)
 	{
 		buffer[i] = c;
 		i++;
-	}
+		}
 	return (1);
 }
 
@@ -33,6 +33,9 @@ int _putchar(int c)
 int _puts(char *s)
 {
 	int i = 0;
+
+	if (s == NULL)
+		return (_puts("(null)"));
 
 	while (s[i] != '\0')
 	{

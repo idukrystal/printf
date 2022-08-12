@@ -1,0 +1,38 @@
+#include <stdlib.h>
+#include "main.h"
+
+/**
+ * to_base - prints an unsigned int in any \
+given base
+ * @n: the integer
+ * @b: a char trpresenting the base
+ * @f: flag pointer
+ * Return: number of chars printed;
+ */
+int to_base(unsigned int n, char b, flags *\
+f)
+{
+        unsigned int i = 0;
+
+        if (f->hash == 1 && n != 0)
+        {
+                if (b == 'X' || b == 'x')
+                        i += _putchar('0') \
++ _putchar(b);
+                if (b == 'o')
+                        i += _putchar('0');
+        }
+        i += base_n(n, b);
+        return (i);
+}
+
+/**
+ * base_n- prints insigned int
+ * @n: integer
+ * @b: charcter of base
+ * Return: no
+ */
+int base_n(unsigned int n, char b)
+{
+        unsigned int i = 0, tmp;
+        int base;

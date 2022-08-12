@@ -35,6 +35,12 @@ int is_flag(char c, flags *f)
 	case '#':
 		f->hash = 1;
 		return (1);
+	case 'l':
+		f->l = 1;
+		return (1);
+	case 'h':
+		f->h = 1;
+		return (1);
 	}
 	return (0);
 }
