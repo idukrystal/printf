@@ -64,12 +64,23 @@ int is_valid(char c)
 	}
 	return (0);
 }
-
+/**
+ * is_digit - check digits
+ * @c: character
+ *
+ * Return: c
+ */
 int is_digit(char c)
 {
 	return (c >= '0' && c <= '9');
 }
-
+/**
+ * set_width - set width
+ * @format: format string
+ * @i: integer
+ * @j: integer
+ * @f: pointer f
+ */
 void set_width(const char *format, int i, int j, flags *f)
 {
 	unsigned int tens = 1, c, num = 0;
