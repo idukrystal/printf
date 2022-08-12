@@ -83,7 +83,8 @@ int is_digit(char c)
  */
 void set_width(const char *format, int i, int j, flags *f)
 {
-	unsigned int tens = 1, c, num = 0;
+	unsigned int tens = 1, num = 0;
+	int c;
 
 	if (!(j > i))
 		return;
