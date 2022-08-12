@@ -25,8 +25,8 @@ int _printf(const char *format, ...);
 unsigned int _strlen(const char *);
 int is_flag(char, flags *);
 void set_width(char *, int, int, flags *);
-int is_digit(char );
-int to_int(char );
+int is_digit(char);
+int to_int(char);
 int is_valid(char c);
 char *convert_char(void *);
 int print_specifier(char c, va_list args, flags *);
@@ -53,5 +53,7 @@ int print_rev(char *);
 int rot13(char *s);
 
 char rot(char c);
+
+int to_int(char C);
 
 #endif /* MAIN_H  */
