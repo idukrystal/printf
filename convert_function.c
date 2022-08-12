@@ -13,7 +13,7 @@ int to_base(unsigned int n, char b, flags *f)
 	unsigned int i = 0;
 
 	if ((f->hash == 1 && n != 0) && (b == 'X' || b == 'x'))
-		i += _puts("0X");
+		i += _putchar('0') + _putchar(b);
 	i += base_n(n, b);
 	return (i);
 }
