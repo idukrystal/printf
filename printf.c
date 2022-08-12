@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 					while (is_digit(format[j]))
 						j++;
 					set_width(format, j, i, &f);
-					i = (i == j) ? i +1: j;
+					i = (i == j) ? i + 1 : j;
 				}
 			}
 			if (format[i] != '\0')
