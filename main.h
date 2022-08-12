@@ -54,4 +54,6 @@ int rot13(char *s);
 
 char rot(char c);
 
+int width(const char *format, int *i, va_list list);
+
 #endif /* MAIN_H  */
