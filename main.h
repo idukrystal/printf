@@ -54,9 +54,6 @@ int rot13(char *s);
 
 char rot(char c);
 
-<<<<<<< HEAD
 int to_int(char C);
-=======
->>>>>>> 168a2b93a7754f235d0b8d3650ed909214f26b8c
 
 #endif /* MAIN_H  */
