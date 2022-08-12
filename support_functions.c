@@ -24,6 +24,8 @@ unsigned int _strlen(const char *s)
  */
 int is_flag(char c, flags *f)
 {
+	if (is_digit(c))
+		return (1);
 	switch (c)
 	{
 	case ' ':
@@ -61,4 +63,19 @@ int is_valid(char c)
 			return (1);
 	}
 	return (0);
+}
+
+int is_digit(char c)
+{
+	return (c >= '0' && c<= '9');
+}
+
+void set_width(char *format, int i, int j, flags *)
+{
+	unsigned int tens = 1, c, num = 0;
+	if (!(j > i))
+		return;
+	for(c = j - 1; c >= i; c--, tenn *= 10)
+		num += (to_int(format[c]) * ten);
+	f->width = num;
 }

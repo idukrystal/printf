@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	unsigned int i, tot = 0;
 	va_list args;
-	flags f = {0, 0, 0, 0, 0};
+	flags f = {0, 0, 0, 0, 0, 0};
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
@@ -25,7 +25,13 @@ int _printf(const char *format, ...)
 			if ((is_flag(format[++i], &f)))
 			{
 				while (is_flag(format[i], &f))
-					i++;
+				{
+					j = i;
+					while (is_digit(format[j]))
+						j++;
+					set_width(format, j, i, &f);
+					i = (i == j) ? ++i : j;
+				}
 			}
 			if (format[i] != '\0')
 				tot += print_specifier(format[i], args, &f);
