@@ -1,4 +1,4 @@
-#include "main.h"
+/#include "main.h"
 
 /**
  * _printf - prints a formated string
@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 					while (is_digit(format[j]))
 						j++;
 					set_width(format, j, i, &f);
-					i = (i == j) ? i +1: j;
+					i = (i == j) ? ++i : j;
 				}
 			}
 			if (format[i] != '\0')

@@ -70,13 +70,13 @@ int is_digit(char c)
 	return (c >= '0' && c <= '9');
 }
 
-void set_width(char *format, int i, int j, flags *)
+void set_width(const char *format, int i, int j, flags *f)
 {
 	unsigned int tens = 1, c, num = 0;
 
 	if (!(j > i))
 		return;
-	for (c = j - 1; c >= i; c--, tenn *= 10)
-		num += (to_int(format[c]) * ten);
+	for (c = j - 1; c >= i; c--, tens *= 10)
+		num += (to_int(format[c]) * tens);
 	f->width = num;
 }
