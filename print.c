@@ -12,11 +12,11 @@ int print_specifier(char c, va_list args, flags *f)
 	switch (c)
 	{
 	case 'c':
-		return (_putchar(va_arg(args, int)));
+		return (_putcharf(va_arg(args, int), f->width));
 	case 's':
-		return (_puts(va_arg(args, char *)));
+		return (_putsf(va_arg(args, char *), f->width));
 	case '%':
-		return (_putchar(c));
+		return (_putcharf(c, f->width));
 	case 'd':
 	case 'i':
 		if (f->l == 1)
@@ -48,4 +48,39 @@ int print_specifier(char c, va_list args, flags *f)
 	default:
 		return (_putchar('%') + _putchar(c));
 	}
+}
+
+/**
+ * _putsf - prints a formated string
+ * @s: the char
+ * @width: space to fill
+ * Return: no of charactes pribted
+ */
+int _putsf(char *s, int width)
+{
+	int len = _strlen(s);
+	int i, tot = 0;
+
+	for (i = 0; i < (width - len); i++)
+		tot += _putchar(' ');
+
+	tot += _puts(s);
+	return (tot);
+
+}
+
+/**
+ * _putcharf - prints a formated char
+ * @c: the char
+ * @width: space to fill
+ * Return: no of charactes pribted
+ */
+int _putcharf(char c, int width)
+{
+	int tot = 0, i;
+
+	for (i = 0; i < (width - 1); i++)
+		tot += _putchar(' ');
+	tot += _putchar(c);
+	return (tot);
 }

@@ -6,6 +6,9 @@
  * @plus: '+' flag
  * @space: ' ' flag
  * @hash: '#' flag
+ * @l: lenth midifier
+ * @h: length
+ * @width: min width
  */
 typedef struct flags
 {
@@ -31,6 +34,8 @@ int to_int(char);
 int is_valid(char c);
 char *convert_char(void *);
 int print_specifier(char c, va_list args, flags *);
+int _putcharf(char, int);
+int _putsf(char *, int);
 unsigned int  print_number(int n, flags *);
 unsigned int  print_u_number(unsigned int);
 unsigned int print_lu_number(unsigned long  int);

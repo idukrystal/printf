@@ -25,7 +25,9 @@ unsigned int _strlen(const char *s)
 int is_flag(char c, flags *f)
 {
 	if (is_digit(c))
+	{
 		return (1);
+	}
 	switch (c)
 	{
 	case ' ':
@@ -42,6 +44,8 @@ int is_flag(char c, flags *f)
 		return (1);
 	case 'h':
 		f->h = 1;
+		return (1);
+	case '*':
 		return (1);
 	}
 	return (0);

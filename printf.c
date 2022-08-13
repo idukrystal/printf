@@ -29,7 +29,10 @@ int _printf(const char *format, ...)
 					j = i;
 					while (is_digit(format[j]))
 						j++;
-					set_width(format, j, i, &f);
+					if (i != j)
+						set_width(format, i, j, &f);
+					if (format[j] == '*')
+						f.width = va_arg(args, int);
 					i = (i == j) ? i + 1 : j;
 				}
 			}

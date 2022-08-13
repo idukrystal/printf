@@ -9,16 +9,15 @@
 unsigned int  print_number(int n, flags *f)
 {
 	unsigned int m, d, count, tot = 0;
+	int neg = 0, num = 0, z, w = 0;
 
 	if (f->space == 1 && f->plus == 0 && n >= 0)
-		tot += _putchar(' ');
+		w = 1;
 	if (f->plus == 1 && n >= 0)
-		tot += _putchar('+');
-
+		w = 1;
 	if (n < 0)
 	{
-		_putchar(45);
-		tot++;
+		neg = 1;
 		m = n * -1;
 	}
 	else
@@ -32,8 +31,17 @@ unsigned int  print_number(int n, flags *f)
 	{
 		d /= 10;
 		count *= 10;
+		num++;
 	}
-
+	num++;
+	for (z = 0; z < (f->width - num - neg - w); z++)
+		tot += _putchar(' ');
+	if (neg)
+		tot += _putchar('-');
+	if (f->space == 1 && f->plus == 0 && n >= 0)
+		tot += _putchar(' ');
+	if (f->plus == 1 && n >= 0)
+		tot += _putchar('+');
 	for (; count >= 1; count /= 10)
 	{
 		_putchar(((m / count) % 10) + 48);
